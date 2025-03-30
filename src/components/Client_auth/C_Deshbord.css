@@ -1,0 +1,422 @@
+/* General Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6);
+  color: #fff;
+  height: 70px;
+  position: relative;
+  /* Ensure the navbar is positioned above other content */
+  z-index: 1001;
+  /* Ensure it appears above the carousel */
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 15px;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: bisque;
+}
+
+.search-input {
+  padding: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.profile-icon {
+  cursor: pointer;
+  /* display: flex; */
+  align-items: center;
+  height: 10px;
+  block-size: 20%;
+  margin-right: 10px;
+}
+
+.navbar .profile-icon {
+  margin-right: 10px;
+  /* Adjust margin so it doesn't collide with the edge */
+  position: relative;
+  z-index: 1002;
+  width: 40px;
+  height: 40px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Profile Panel */
+/* Profile Panel */
+.profile-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6);
+  color: #fff;
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  /* Added z-index to ensure it appears above the carousel */
+}
+
+
+.profile-panel.open {
+  right: 0;
+}
+
+#close-btn {
+  color: #fff;
+  font-size: 20px;
+  width: 10%;
+  background-color: #160070;
+  /* border-radius: 0; */
+  margin-left: 90%;
+  cursor: pointer;
+
+  /* top: 10px;
+    right: 10px; */
+
+  /* cursor: pointer; */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6);
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    left: 0;
+  }
+
+  .link {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+
+  .search-input {
+    margin: 20px 0;
+    font-size: 20px;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .profile-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* user profile setup css  */
+
+.user-profile {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* background-color: #f9f9f9; */
+  text-align: center;
+}
+
+.profile-photo {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.upload-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.upload-icon:hover {
+  background: #ddd;
+}
+
+.profile-details input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#save-btn,
+#logout-btn {
+  width: 50%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  width: auto;
+}
+
+#logout-btn:hover {
+  background-color: #ff1403;
+
+}
+
+#save-btn {
+  background-color: #118f00;
+}
+
+#logout-btn {
+  margin-left: 5px;
+  display: inline;
+}
+
+#logout-btn {
+  background-color: #f44336;
+}
+
+.save-btn:hover,
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 500px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .user-profile {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .profile-photo img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+#profile_name {
+  align-items: center;
+  margin-left: 35%;
+}
+
+
+
+
+.remove-photo-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline;
+  width: auto;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.remove-photo-btn:hover {
+  background-color: #ffffff;
+
+}
+
+.remove-photo-btn .fa-trash-alt {
+  color: red;
+  /* Change color if needed */
+  font-size: 10px;
+  /* Adjust size if needed */
+}
+
+.profile-icon-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.carousel-image {
+  max-height: 600px;
+  /* Adjust this value as needed */
+  object-fit: cover;
+  /* Ensures the image covers the area without distortion */
+  z-index: 0;
+  /* Make sure it's behind the navbar */
+  position: relative;
+  /* Ensure proper stacking */
+}
+
+#back_blogs {
+  background-color: #b0bad7;
+
+}
+
+#title {
+  padding-top: 5%;
+  position: relative;
+}
+
+#bords {
+  border: #004080;
+  border: solid 5px;
+}
+
+#edit-btn {
+  display: inline;
+  width: auto;
+  margin: 5%;
+}
+
+#edit-btn:hover {
+  background-color: #118f00;
+}
+
+#bords {
+  width: 150px;
+  /* Set a fixed width */
+  height: 150px;
+  /* Set a fixed height */
+  border-radius: 50%;
+  /* If you want a circular image */
+  object-fit: cover;
+  /* Ensure the image covers the area without stretching */
+  border: 3px solid black;
+  /* Ensure the border is consistent */
+  margin-left: 30%;
+  margin-top: 10%;
+}
+
+#custom-offcanvas {
+  height: 80vh;
+  /* Adjust the height to your needs, e.g., 30% of the viewport height */
+  max-height: 90vh;
+  /* Maximum height limit */
+  border-radius: 0 0 10px 10px;
+  /* Optional: rounded bottom corners for styling */
+  background-color: #c5c1c1;
+}
+
+@media (max-width: 768px) {
+
+  /* For tablets and mobile devices */
+  .custom-offcanvas {
+    height: 50vh;
+    /* Adjust height for smaller screens */
+    max-height: 70vh;
+    /* Maximum height limit for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* For mobile phones */
+  .custom-offcanvas {
+    height: 60vh;
+    /* Further adjust height for very small screens */
+    max-height: 80vh;
+    /* Maximum height limit for very small screens */
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+#field select {
+  /* display: inline; */
+  color: #004080;
+
+}
